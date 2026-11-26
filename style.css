@@ -112,6 +112,56 @@ p { margin-block: .65rem 0; color: var(--muted); }
 .about p, .contact p { max-width: 55ch; }
 .contact { text-align: center; }
 .contact p { margin-inline: auto; }
+.bee-contact {
+  max-width: 44rem;
+  margin: 1.5rem auto 0;
+  border: 1px solid #e8c977;
+  border-radius: 1.4rem;
+  background: #fff4d7;
+  text-align: left;
+}
+.bee-contact summary {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  padding: .7rem 1rem;
+  border-radius: inherit;
+  cursor: pointer;
+  list-style: none;
+  font: bold 1.25rem/1.2 var(--heading);
+}
+.bee-contact summary::-webkit-details-marker { display: none; }
+.bee-contact summary:hover { background: #ffeab2; }
+.bee-contact-toggle {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-inline-start: auto;
+  border-radius: 50%;
+  background: var(--honey);
+}
+.bee-contact-toggle::before, .bee-contact-toggle::after {
+  content: '';
+  grid-area: 1 / 1;
+  inline-size: .75rem;
+  block-size: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+.bee-contact-toggle::after { transform: rotate(90deg); }
+.bee-contact[open] .bee-contact-toggle::after { display: none; }
+.bee-contact-content {
+  display: grid;
+  grid-template-columns: minmax(9rem, 1fr) 1.6fr;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 1.75rem);
+  padding: 1rem;
+  border-top: 1px solid #e8c977;
+}
+.bee-contact-portrait { width: 100%; height: auto; border-radius: .95rem; }
+.bee-contact-email span { display: block; font-size: .875rem; }
+.bee-contact-email strong { color: var(--ink); overflow-wrap: anywhere; }
 .site-footer { background: #39293e; color: #fff8ef; }
 .site-footer .wordmark span { color: #ffe2a1; }
 .site-footer small { color: #eadddf; }
@@ -138,6 +188,8 @@ p { margin-block: .65rem 0; color: var(--muted); }
 }
 @media (max-width: 480px) {
   .character-grid, .family-notes { grid-template-columns: 1fr; }
+  .bee-contact-content { grid-template-columns: 1fr; }
+  .bee-contact-portrait { max-width: 14rem; }
   .character img { aspect-ratio: 3 / 2; }
   .footer-inner nav { flex-basis: 100%; flex-wrap: wrap; gap: .75rem 1rem; }
 }
