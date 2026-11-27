@@ -1,5 +1,7 @@
 # Little Hive Stories
 
+[Visit the live site](https://ninosimeonov.github.io/little-hive-stories/)
+
 Little Hive Stories is a responsive, English-language website for original AI characters and children’s books. The illustrated one-page site introduces Bee, Sheep Head, Stoyan, and Hank with his dog. It also has a book preview, an introduction to the project, and an expandable **Ask Bee** contact card.
 
 The book previews currently say **Coming Soon**, and the contact card uses a sample email address.
